@@ -1,5 +1,5 @@
 import { AppBskyActorDefs, Agent } from "@atproto/api";
-import { DID, PRONOUNS, URIs } from "./constants.js";
+import { DID, MOODS, URIs } from "./constants.js";
 
 export const label = async (
   agent: Agent,
@@ -44,7 +44,7 @@ export const label = async (
 
   if (repo.data.labels && repo.data.labels.length >= 4) return;
 
-  if (PRONOUNS[post]) {
+  if (MOODS[post]) {
     await agent
       .withProxy("atproto_labeler", DID)
       .api.tools.ozone.moderation.emitEvent({
