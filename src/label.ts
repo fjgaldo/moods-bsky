@@ -50,7 +50,7 @@ export const label = async (
       .api.tools.ozone.moderation.emitEvent({
         event: {
           $type: "tools.ozone.moderation.defs#modEventLabel",
-          createLabelVals: [PRONOUNS[post]],
+          createLabelVals: [MOODS[post]],
           negateLabelVals: [],
         },
         subject: {
