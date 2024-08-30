@@ -26,6 +26,10 @@ export const MOODS: Record<string, string> = {
   "Smiling Face with Halo": "smiling-face-with-halo",
   "Smiling Face with Smiling Eyes": "smiling-face-with-smiling-eyes",
   "Face with Tears of Joy": "face-with-tears-of-joy",
+  "Face Exhaling": "face-exhaling",
+  "Face with Rolling Eyes": "face-with-rolling-eyes",
+  "Melting Face": "melting-face",
+  "Hole": "hole",
 };
 
 export const URIs: Record<string, string> = {
@@ -83,6 +87,14 @@ export const URIs: Record<string, string> = {
     "Grinning Face",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wtn55ujv2y":
     "Smiling Face with Sunglasses",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvpvetyk22":
+    "Hole",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvm3rtbt2r":
+    "Face Exhaling",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvlh6xgg2s":
+    "Face with Rolling Eyes",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvkhmq6b2s":
+    "Melting face",
 };
 
 export const DID = process.env.DID ?? "";
