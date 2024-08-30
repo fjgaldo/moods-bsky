@@ -22,7 +22,7 @@ export const MOODS: Record<string, string> = {
   "Smirking Face": "smirking-face",
   "Face Blowing a Kiss": "face-blowing-a-kiss",
   "Star Struck": "star-struck",
-  "Smiling Face with Heart Shaped Eyes": "smiling-face-with-heart-shaped-eyes",
+  "Smiling Face with Heart Eyes": "smiling-face-with-heart-eyes",
   "Smiling Face with Halo": "smiling-face-with-halo",
   "Smiling Face with Smiling Eyes": "smiling-face-with-smiling-eyes",
   "Face with Tears of Joy": "face-with-tears-of-joy",
@@ -74,7 +74,7 @@ export const URIs: Record<string, string> = {
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wrez32fs2o":
     "Star Struck",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wrejze6322":
-    "Smiling Face with Heart Shaped Eyes",
+    "Smiling Face with Heart Eyes",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wrdzvcho27":
     "Smiling Face with Halo",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wrcvjxww2n":
