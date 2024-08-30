@@ -94,7 +94,7 @@ export const URIs: Record<string, string> = {
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvlh6xgg2s":
     "Face with Rolling Eyes",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvkhmq6b2s":
-    "Melting face",
+    "Melting Face",
 };
 
 export const DID = process.env.DID ?? "";
