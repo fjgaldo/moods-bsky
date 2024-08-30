@@ -6,12 +6,13 @@ export const MOODS: Record<string, string> = {
 };
 
 export const URIs: Record<string, string> = {
-  "at://did:plc:rh2ofunvtpc3hfilipjmwxm5/app.bsky.feed.post/3l2uae6ynpv25":
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wall4qyd2r":
     "Like this post to delete your labels",
-  "at://did:plc:rh2ofunvtpc3hfilipjmwxm5/app.bsky.feed.post/3l2uczbg6hc2l":
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2waptq3n422":
     "Grinning Face",
-  "at://did:plc:rh2ofunvtpc3hfilipjmwxm5/app.bsky.feed.post/3l2ucyg4wz22h":
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2waqh4n6622":
     "Beaming Face with Smiling Eyes",
 };
 
 export const DID = process.env.DID ?? "";
+export const SIGNING_KEY = process.env.SIGNING_KEY ?? "";
