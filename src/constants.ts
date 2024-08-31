@@ -30,6 +30,17 @@ export const MOODS: Record<string, string> = {
   "Face with Rolling Eyes": "face-with-rolling-eyes",
   "Melting Face": "melting-face",
   "Hole": "hole",
+  "Shrug": "shrug",
+  "Mood Swings": "mood-swings",
+  "Heart Hands": "heart-hands",
+  "Middle Finger": "middle-finger",
+  "Zombie": "zombie",
+  "Bat": "bat",
+  "Blood Drop": "blood-drop",
+  "Skull": "skull",
+  "Ghost": "ghost",
+  "Jack O Lantern": "jack-o-lantern",
+  "Coffe and Cigarette": "coffe-cigarette",
 };
 
 export const URIs: Record<string, string> = {
@@ -95,6 +106,28 @@ export const URIs: Record<string, string> = {
     "Face with Rolling Eyes",
   "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2wvkhmq6b2s":
     "Melting Face",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zmhoqubq2p":
+    "Mood Swings",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zmdh4nwg2s":
+    "Shrug",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zmgnpv7c22":
+    "Heart Hands",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zmfd7k4e2n":
+    "Middle Finger",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrg2r3gu2h":
+    "Zombie",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrfmfldy22":
+    "Bat",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrfayyxo2p":
+    "Blood Drop",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrewoxky2s":
+    "Skull",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrek5jzz22":
+    "Ghost",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zre5lg542s":
+    "Jack O Lantern",
+  "at://did:plc:7m7xz5ekdmw3tephpgn72ooz/app.bsky.feed.post/3l2zrc72g2m2o":
+    "Coffe and Cigarette",
 };
 
 export const DID = process.env.DID ?? "";
