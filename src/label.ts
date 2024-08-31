@@ -7,16 +7,16 @@ export const label = async (
   uri: string,
 ) => {
   const did = AppBskyActorDefs.isProfileView(subject) ? subject.did : subject;
-  const labels = await agent
-    .withProxy("atproto_labeler", DID)
-    .com.atproto.label.queryLabels({ sources: [DID], uriPatterns: [did] })
+  const labels = await agent.com.atproto.label
+    .queryLabels({ sources: [DID], uriPatterns: [did] })
     .catch((err) => {
       console.log(err);
     });
+  if (!labels) return;
 
   const post = URIs[uri];
 
-  if (labels && post?.includes("Like this post to delete")) {
+  if (post?.includes("Like this post to delete")) {
     await agent
       .withProxy("atproto_labeler", DID)
       .tools.ozone.moderation.emitEvent({
@@ -37,20 +37,7 @@ export const label = async (
         console.log(err);
       })
       .then(() => console.log(`Deleted labels for ${did}`));
-    return;
-  }
-
-  if (labels) {
-    const labelCount = labels.data.labels.reduce((set, label) => {
-      if (!label.neg) set.add(label.val);
-      else set.delete(label.val);
-      return set;
-    }, new Set()).size;
-
-    if (labelCount >= 4) return;
-  }
-
-  if (MOODS[post]) {
+  } else if (labels.data.labels.length < 4 && MOODS[post]) {
     await agent
       .withProxy("atproto_labeler", DID)
       .tools.ozone.moderation.emitEvent({
