@@ -1,24 +1,10 @@
 import { AppBskyFeedLike } from "@atproto/api";
 import { Firehose } from "@skyware/firehose";
-import { getAgent } from "./agent.js";
 import { label } from "./label.js";
-import { DID, SIGNING_KEY } from "./constants.js";
+import { DID } from "./constants.js";
 import fs from "node:fs";
-import { LabelerServer } from "@skyware/labeler";
-
-const server = new LabelerServer({ did: DID, signingKey: SIGNING_KEY });
-
-server.start(4001, (error, address) => {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log(`Labeler server listening on ${address}`);
-  }
-});
 
 const subscribe = async () => {
-  const agent = await getAgent();
-
   let cursorFirehose = 0;
   const cursorFile = fs.readFileSync("cursor.txt", "utf8");
 
@@ -43,11 +29,12 @@ const subscribe = async () => {
     cursorFirehose = commit.seq;
     commit.ops.forEach(async (op) => {
       if (op.action !== "delete" && AppBskyFeedLike.isRecord(op.record)) {
-        if ((op.record.subject.uri ?? "").includes(DID)) {
-          if ((op.record.subject.uri ?? "").includes("app.bsky.feed.post")) {
-            await label(agent, commit.repo, op.record.subject.uri).catch(
-              (err) => console.error(err),
-            );
+        if (op.record.subject.uri.includes(DID)) {
+          if (op.record.subject.uri.includes("app.bsky.feed.post")) {
+            await label(
+              commit.repo,
+              op.record.subject.uri.split("/").pop()!,
+            ).catch((err) => console.error(err));
           }
         }
       }
